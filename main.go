@@ -17,9 +17,9 @@ import (
 
 //Точка входа в программу
 func main() {
-	botToken := "5251643324:AAExkmd9H7LmX_jhS-RUb7kp5gF_wey-eyg"
+	botToken := os.Getenv("Bot_Token")
 	//https://api.telegram.org/bot<token>/METHOD_NAME
-	botApi := "https://api.telegram.org/bot"
+	botApi := os.Getenv("Bot_URL")
 	botUrl := botApi + botToken
 	offset := 0
 	//var researchBD []ResearchType
